@@ -3,36 +3,26 @@
 #include <cstdint>
 #include <cmath>
 #include <iostream>
+#include <algorithm>
+#include <fstream>
 
-class Atom
+class vect
 {
 public:
-    Atom();
-    Atom(bool is_im, double x, double y, double z);
-    bool is_image;
-    double x, y, z;
-    double prev_x, prev_y, prev_z;
-    double a;
-};
-struct positions
-{
-    Atom ** pos_x;
-    Atom ** pos_y;
-    Atom ** pos_z;
+    double x;
+    double y;
+    double z;
+    //constructs
+    vect();
+    vect(double x_p, double y_p, double z_p);
+    vect operator + (vect a);
+    void operator+=(vect a);
+    vect operator * (double l);
+    void operator *= (double l);
+    double sqr_len();
 };
 
-class Field
-{
-private:
-    double size;
-    int64_t n;
-    Atom * pieces;
-    positions p;
-public:
-    Field(int64_t n, double a);
-    void show_info();
-    ~Field();
-};
+
 
 
 #endif
