@@ -19,6 +19,10 @@ public:
     void operator+=(vect a);
     vect operator * (double l);
     void operator *= (double l);
+    vect operator - (vect a);
+    void operator -= (vect a);
+    vect operator / (double l);
+    void operator /= (double l);
     double sqr_len();
 };
 

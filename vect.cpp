@@ -42,3 +42,23 @@ double vect::sqr_len() {
 }
 
 
+
+vect vect::operator - (vect a) {
+    vect ret(x - a.x, y - a.y, z - a.z);
+    return ret;
+}
+void vect::operator -= (vect a) {
+    x -= a.x;
+    y -= a.y;
+    z -= a.z;
+}
+vect vect::operator / (double l) {
+    vect ret(x/l, y/l, z/l);
+    return ret;
+}
+void vect::operator /= (double l) {
+    x /= l;
+    y /= l;
+    z /= l;
+}
+
