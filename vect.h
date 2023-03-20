@@ -15,6 +15,8 @@ public:
     //constructs
     vect();
     vect(double x_p, double y_p, double z_p);
+    //vect(vect & v);
+    void operator=(vect v);
     vect operator + (vect a);
     void operator+=(vect a);
     vect operator * (double l);

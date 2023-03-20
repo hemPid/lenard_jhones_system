@@ -15,6 +15,13 @@ vect::vect(double x_p, double y_p, double z_p) {
     z = z_p;
 }
 
+void vect::operator=(vect v) {
+    x = v.x;
+    y = v.y;
+    z = v.z;
+}
+
+
 vect vect::operator+(vect a) {
         vect ret_vec(x+a.x, y+a.y, z+a.z);
         return ret_vec;

@@ -9,5 +9,7 @@ int main() {
     std::cin >> n >> a >> ticks;
     field test(n,a);
     test.print_pices_info();
+    test.make_ticks(ticks);
+    test.print_pices_info();
     return 0;
 }
